@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar/Navbar"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 function App() {
   return (
     <>
-      <h1>EcoTrade</h1>
+      <Navbar/>
+      <ItemListContainer name={"EcoTrade"}/>
     </>
   )
 }
