@@ -4,10 +4,10 @@ import CartWidget from "../CartWidget/CartWidget"
 const Navbar = () => {
     return(
         <nav className={classes.nav}>
-            <p style={{fontSize: 20}}><a>EcoTrade</a></p>
-            <p><a>Frutas</a></p>
-            <p><a>Verduras</a></p>
-            <p><a>Otros</a></p>
+            <p style={{fontSize: 20}}><a>PokeTrade</a></p>
+            <p>Planta</p>
+            <p>Fuego</p>
+            <p>Agua</p>
             <CartWidget/>
         </nav>
     )
