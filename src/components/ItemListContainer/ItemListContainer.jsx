@@ -9,10 +9,7 @@ const ItemListContainer = ({greeting}) => {
             .then(result => {
                 setProducts(result)
             })
-            .catch(error => {
-                console.log(error)
-            })
-    },[])
+    })
     
     return(
         <div>

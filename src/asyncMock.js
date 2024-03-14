@@ -5,7 +5,8 @@ const products = [{
       "Planta",
       "Veneno"
     ],
-    "base": 318,
+    "stock":20,
+    "price": 3180,
     "img":"https://archives.bulbagarden.net/media/upload/f/fb/0001Bulbasaur.png"
   },
   {
@@ -15,7 +16,8 @@ const products = [{
       "Planta",
       "Veneno"
     ],
-    "base": 405,
+    "stock":20,
+    "price": 4050,
     "img":"https://archives.bulbagarden.net/media/upload/thumb/8/81/0002Ivysaur.png/1200px-0002Ivysaur.png?20240116160522"
   },
   {
@@ -25,7 +27,8 @@ const products = [{
       "Planta",
       "Veneno"
     ],
-    "base": 525,
+    "stock":20,
+    "price": 5250,
     "img":"https://archives.bulbagarden.net/media/upload/thumb/6/6b/0003Venusaur.png/1200px-0003Venusaur.png?20240116150541"
   },
   {
@@ -34,7 +37,8 @@ const products = [{
     "type": [
       "Fuego"
     ],
-    "base": 309,
+    "stock":20,
+    "price": 3090,
     "img":"https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png?20240116165514"
   },
   {
@@ -43,7 +47,8 @@ const products = [{
     "type": [
       "Fuego"
     ],
-    "base": 405,
+    "stock":20,
+    "price": 4050,
     "img":"https://archives.bulbagarden.net/media/upload/thumb/0/05/0005Charmeleon.png/1200px-0005Charmeleon.png?20240116154739"
   },
   {
@@ -53,7 +58,8 @@ const products = [{
       "Fuego",
       "Volador"
     ],
-    "base": 534,
+    "stock":20,
+    "price": 5340,
     "img":"https://archives.bulbagarden.net/media/upload/thumb/3/38/0006Charizard.png/1200px-0006Charizard.png?20240116143423"
   },
   {
@@ -62,7 +68,8 @@ const products = [{
     "type": [
       "Agua"
     ],
-    "base": 314,
+    "stock":20,
+    "price": 3140,
     "img":"https://archives.bulbagarden.net/media/upload/5/54/0007Squirtle.png?20240116163723"
   },
   {
@@ -71,7 +78,8 @@ const products = [{
     "type": [
       "Agua"
     ],
-    "base": 405,
+    "stock":20,
+    "price": 4050,
     "img":"https://archives.bulbagarden.net/media/upload/thumb/0/0f/0008Wartortle.png/1200px-0008Wartortle.png?20240116161929"
   },
   {
@@ -80,7 +88,8 @@ const products = [{
     "type": [
       "Agua"
     ],
-    "base": 530,
+    "stock":20,
+    "price": 5300,
     "img":"https://archives.bulbagarden.net/media/upload/thumb/0/0a/0009Blastoise.png/1200px-0009Blastoise.png?20240116151312"
   }
 ]
@@ -89,4 +98,20 @@ export const getProducts = () => {
   return new Promise((resolve)=>{
     resolve(products)
   },500)
+}
+
+export const getProductById = (itemId) => {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve(products.find(prod => prod.id === itemId))
+      }, 100)
+  })
+}
+
+export const getProductsByCategory = (categoryId) => {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve(products.filter(prod => prod.category === categoryId))
+      }, 1000)
+  })
 }
